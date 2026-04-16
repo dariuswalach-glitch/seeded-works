@@ -66,8 +66,7 @@ const isTouchDevice = () =>
 
 const isMobileViewport = () => window.innerWidth < 768;
 
-const shouldUseSmoothScroll = () =>
-  !prefersReducedMotion.matches && !isTouchDevice() && !isMobileViewport();
+const shouldUseSmoothScroll = () => false;
 
 const getWordOptions = (element) => {
   const mobile = isMobileViewport();
