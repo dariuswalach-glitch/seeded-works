@@ -964,38 +964,7 @@ body.smooth-active .smooth-content {
     transform: rotate(-18deg) translateX(820px) translateY(64px) scaleX(0.8);
   }
 }
-
 @media (hover: hover) and (pointer: fine) {
-  body,
-  a,
-  button,
-  input,
-  textarea,
-  select {
-    cursor: none;
-  }
-
-  .custom-cursor {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border: 1px solid rgba(245, 245, 240, 0.6);
-    border-radius: 999px;
-    pointer-events: none;
-    z-index: 100;
-    transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
-  }
-
-  .custom-cursor.is-active {
-    width: 20px;
-    height: 20px;
-    background: rgba(74, 124, 89, 0.9);
-    border-color: rgba(74, 124, 89, 0.9);
-  }
-
   .magnetic {
     transition:
       background-color 0.3s ease,
