@@ -469,21 +469,6 @@ if (form && formSuccess) {
   });
 }
 
-if (cursor && finePointerQuery.matches) {
-  const state = {
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
-    currentX: window.innerWidth / 2,
-    currentY: window.innerHeight / 2,
-  };
-
-  const animateCursor = () => {
-    state.currentX += (state.x - state.currentX) * 0.18;
-    state.currentY += (state.y - state.currentY) * 0.18;
-    cursor.style.transform = `translate(${state.currentX - cursor.offsetWidth / 2}px, ${state.currentY - cursor.offsetHeight / 2}px)`;
-    window.requestAnimationFrame(animateCursor);
-  };
-
   window.addEventListener("mousemove", (event) => {
     state.x = event.clientX;
     state.y = event.clientY;
