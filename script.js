@@ -4,14 +4,17 @@ const smoothShell = document.querySelector("#smooth-shell");
 const smoothContent = document.querySelector("#smooth-content");
 const hero = document.querySelector(".hero");
 let starCanvas = document.querySelector("#star-canvas") || (hero ? hero.querySelector("canvas") : null);
+
 if (!starCanvas && hero) {
   starCanvas = document.createElement("canvas");
   hero.appendChild(starCanvas);
 }
+
 if (hero) {
   hero.style.position = "relative";
   hero.style.overflow = "hidden";
 }
+
 if (starCanvas) {
   starCanvas.id = "star-canvas";
   Object.assign(starCanvas.style, {
@@ -24,6 +27,7 @@ if (starCanvas) {
     pointerEvents: "none",
   });
 }
+
 const starContext = starCanvas ? starCanvas.getContext("2d") : null;
 const revealElements = document.querySelectorAll(".reveal");
 const loadInElements = document.querySelectorAll(".load-in, .load-sequence");
@@ -467,19 +471,6 @@ if (form && formSuccess) {
       window.alert("Form submission could not be completed. Please try again.");
     }
   });
-}
-
-  window.addEventListener("mousemove", (event) => {
-    state.x = event.clientX;
-    state.y = event.clientY;
-  });
-
-  clickableElements.forEach((element) => {
-    element.addEventListener("mouseenter", () => cursor.classList.add("is-active"));
-    element.addEventListener("mouseleave", () => cursor.classList.remove("is-active"));
-  });
-
-  animateCursor();
 }
 
 if (finePointerQuery.matches) {
